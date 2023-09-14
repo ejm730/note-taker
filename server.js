@@ -85,7 +85,7 @@ app.delete('/api/notes/:id', async (req, res) => {
 
 // GET /notes - Should return the notes.html file
 app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, 'develop', 'public', 'notes.html'));
+  res.sendFile(path.join(__dirname, 'Develop/public/notes.html'));
 });
 
 // GET * - Should return the index.html file
