@@ -9,7 +9,7 @@ const dbFilePath = path.join(__dirname, 'develop', 'db', 'db.json');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'develop', 'public')));
+app.use(express.static(path.join(__dirname, 'Develop/public')));
 
 // Helper function to read the notes from the JSON file
 const readNotesFromFile = async () => {
@@ -90,7 +90,7 @@ app.get('/notes', (req, res) => {
 
 // GET * - Should return the index.html file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'develop', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'Develop/public/index.html'));
 });
 
 app.listen(PORT, () => {
